@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -42,9 +42,10 @@
         <TextView
             android:id="@+id/menu_main"
             style="@style/TextMenuStyle"
+            android:layout_marginTop="@dimen/top_margin_average"
             android:background="@color/menu_selected_grey"
             android:text="@string/main"
-            android:layout_marginTop="@dimen/top_margin_average" />
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/menu_riadovoi"
@@ -168,6 +169,20 @@
         app:layout_constraintStart_toEndOf="@id/linearLayout_menu"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_all_products"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/item_card"
+            app:layout_constraintStart_toEndOf="@id/linearLayout_menu"
+            app:layout_constraintTop_toBottomOf="@id/body2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/side_margin"
+            android:layout_marginTop="@dimen/top_margin_average"
+            android:layout_marginBottom="@dimen/top_margin_average"/>
 
 
 

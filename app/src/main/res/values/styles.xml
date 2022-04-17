@@ -42,6 +42,16 @@
     </style>
 
 
+    <style name="CardViewStyle">
+        <item name="android:backgroundTint">@color/card_background</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="cardElevation">@dimen/elevation</item>
+    </style>
+    <style name="CardViewStyle.Blue">
+        <item name="android:backgroundTint">@color/card_blue_background</item>
+    </style>
+
+
 
 
 </resources>
